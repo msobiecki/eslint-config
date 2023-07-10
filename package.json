@@ -2,7 +2,7 @@
   "name": "@msobiecki/eslint-config",
   "version": "1.0.0",
   "private": false,
-  "description": "",
+  "description": "An ESLint shareable config for JavaScript/TypeScript ecosystem's.",
   "keywords": [
     "eslint",
     "eslint-config"
@@ -16,14 +16,12 @@
   },
   "license": "MIT",
   "author": "Michał Sobiecki <kontakt@codeshaker.pl>",
-  "main": "dist/algorithm.cjs.js",
-  "module": "dist/algorithm.esm.js",
-  "browser": "dist/algorithm.umd.js",
+  "main": "index.js",
   "scripts": {
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
+    "**/*.{js}": [
       "eslint --fix",
       "git add"
     ],
@@ -35,8 +33,14 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
+    "eslint": "^8.44.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.3"
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
