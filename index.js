@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['./base.js'],
+  extends: ['./presets/base/base.js'],
 };
