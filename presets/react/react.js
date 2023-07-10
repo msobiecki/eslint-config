@@ -26,22 +26,10 @@ try {
 
 module.exports = {
   extends: ["airbnb", "airbnb/hooks"],
-  plugins: ["testing-library"],
   settings: {
     react: {
       version: oldestSupportedReactVersion,
     },
-  },
-  rules: {
-    "no-restricted-exports": ["off"],
-    "react/prop-types": ["warn"],
-    "react/function-component-definition": [
-      "error",
-      {
-        namedComponents: ["arrow-function"],
-        unnamedComponents: ["arrow-function"],
-      },
-    ],
   },
   overrides: [
     {
@@ -51,33 +39,6 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
       ],
-      rules: {
-        "react/require-default-props": [0],
-        "@typescript-eslint/no-unsafe-return": ["warn"],
-        "@typescript-eslint/no-unsafe-call": ["warn"],
-        "@typescript-eslint/no-unsafe-member-access": ["warn"],
-        "@typescript-eslint/no-unsafe-assignment": ["warn"],
-        "@typescript-eslint/no-explicit-any": ["warn"],
-      },
-    },
-    {
-      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
-      extends: ["plugin:testing-library/react"],
-      rules: {
-        "testing-library/no-wait-for-multiple-assertions": ["off"],
-        "@typescript-eslint/no-unsafe-return": ["off"],
-        "@typescript-eslint/no-unsafe-call": ["off"],
-        "@typescript-eslint/no-unsafe-member-access": ["off"],
-        "@typescript-eslint/no-unsafe-assignment": ["off"],
-        "@typescript-eslint/no-explicit-any": ["off"],
-        "react/jsx-props-no-spreading": ["off"],
-      },
-    },
-    {
-      files: ["**/*.stories.[jt]s?(x)"],
-      rules: {
-        "react/jsx-props-no-spreading": ["off"],
-      },
     },
   ],
 };
