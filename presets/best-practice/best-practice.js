@@ -8,6 +8,9 @@ module.exports = {
     "plugin:compat/recommended",
     "plugin:prettier/recommended",
   ],
+  rules: {
+    "unicorn/prefer-module": ["off"],
+  },
   overrides: [
     {
       files: ["**/*.ts"],
