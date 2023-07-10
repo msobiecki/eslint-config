@@ -1,3 +1,6 @@
 {
-  "extends": ["./presets/base/base.js", "./presets/best-practice/best-practice.js"]
+  "extends": [
+    "./presets/base/base.js",
+    "./presets/best-practice/best-practice.js"
+  ]
 }
