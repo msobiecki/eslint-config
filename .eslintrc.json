@@ -1,0 +1,3 @@
+{
+  "extends": ["./presets/base/base.js", "./presets/base/best-practice.js"]
+}
