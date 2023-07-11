@@ -3,11 +3,6 @@ module.exports = {
     {
       files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
       extends: ["plugin:jest/recommended", "plugin:jest/style"],
-      settings: {
-        jest: {
-          version: "latest", // auto detect doesn't work
-        },
-      },
     },
   ],
 };
