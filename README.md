@@ -1,6 +1,5 @@
 # eslint-config
 
-[![npm version](https://badge.fury.io/js/%40msobiecki%2Feslint-config.svg)](https://badge.fury.io/js/%40msobiecki%2Feslint-config)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/msobiecki/eslint-config/blob/master/LICENSE)
 
 > Custom ESLint configuration for projects. It extends popular Airbnb ESLint config and other popular configs in one place.
