@@ -56,7 +56,7 @@ To use this ESLint configuration, you need to extend it in your project's `.esli
 ```json
 {
   "extends": [
-    "@msobiecki/eslint-config/jest"
+    "@msobiecki/eslint-config/jest",
     "@msobiecki/eslint-config/jest-dom"
   ]
 }
@@ -66,7 +66,7 @@ To use this ESLint configuration, you need to extend it in your project's `.esli
 ```json
 {
   "extends": [
-    "@msobiecki/eslint-config/jest"
+    "@msobiecki/eslint-config/jest",
     "@msobiecki/eslint-config/jest-react"
   ]
 }
