@@ -43,23 +43,27 @@ To use this ESLint configuration, you need to extend it in your project's `.esli
 
 ### jest configuration
 
+#### base
 ```json
-# base
 {
   "extends": [
     "@msobiecki/eslint-config/jest"
   ]
 }
+```
 
-# dom
+#### dom
+```json
 {
   "extends": [
     "@msobiecki/eslint-config/jest"
     "@msobiecki/eslint-config/jest-dom"
   ]
 }
+```
 
-# react
+#### react
+```json
 {
   "extends": [
     "@msobiecki/eslint-config/jest"
