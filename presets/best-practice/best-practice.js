@@ -2,7 +2,7 @@ module.exports = {
   extends: [
     "plugin:promise/recommended",
     "plugin:unicorn/recommended",
-    "plugin:security/recommended",
+    "plugin:security/recommended-legacy",
     "plugin:jsdoc/recommended",
     "plugin:eslint-comments/recommended",
     "plugin:compat/recommended",
