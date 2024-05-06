@@ -55,5 +55,11 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "overrides": {
+    "eslint-config-next": {
+      "@typescript-eslint/eslint-plugin": "^7.0.0",
+      "@typescript-eslint/parser": "^7.0.0"
+    }
   }
 }
