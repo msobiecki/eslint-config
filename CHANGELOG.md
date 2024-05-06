@@ -1,4 +1,8 @@
-# 8.3.0 (2024-05-06)
+## [8.3.1](https://github.com/msobiecki/eslint-config/compare/v8.3.0...v8.3.1) (2024-05-06)
+
+
+
+# [8.3.0](https://github.com/msobiecki/eslint-config/compare/83fdb4e0467bc330d5a513d46df8b660143e59e2...v8.3.0) (2024-05-06)
 
 
 ### Features
