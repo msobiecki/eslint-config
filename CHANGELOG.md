@@ -1,3 +1,12 @@
+# [8.5.0](https://github.com/msobiecki/eslint-config/compare/v8.4.0...v8.5.0) (2024-05-06)
+
+
+### Features
+
+* update ([155a716](https://github.com/msobiecki/eslint-config/commit/155a7163ab457d532a2fab4e59d20acf46f4fc1a))
+
+
+
 # [8.4.0](https://github.com/msobiecki/eslint-config/compare/v8.3.1...v8.4.0) (2024-05-06)
 
 
