@@ -1,11 +1,11 @@
 name: Run publish
 
-# Controls when the action will run.
+# Controls when the action will run. 
 on:
   # Triggers the workflow on push event but only for the master branch
   push:
-    branches: [master]
-
+    branches: [ master ]
+    
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -14,6 +14,9 @@ jobs:
   publish:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: write
 
     # The type of node version that the job will run on
     strategy:
@@ -23,35 +26,35 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
+      - uses: actions/checkout@v4
       # Use node
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
+        # Set env secrets
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           node-version: ${{ matrix.node-version }}
-
+          registry-url: https://npm.pkg.github.com
+          scope: "@msobiecki"
       # Run version bump step
       - name: Run version bump
-        uses: phips28/gh-action-bump-version@v10.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # Get tag step
-      - name: Get tag
-        id: tag
-        uses: WyriHaximus/github-action-get-previous-tag@v1
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v5.2.1
         with:
-          fallback: 1.0.0 # Optional fallback tag to use when no tag can be found
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          skip-on-empty: false
       # Run release step
       - name: Run release
-        uses: marvinpinto/action-automatic-releases@latest
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: ${{ steps.tag.outputs.tag }}
-          prerelease: false
-      # Run install step
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          release_name: ${{ steps.changelog.outputs.tag }}
+          body: ${{ steps.changelog.outputs.clean_changelog }}
+      # Run install step 
       - run: npm ci
-
       # Run publish step
       - name: Run publish
         uses: JS-DevTools/npm-publish@v1
