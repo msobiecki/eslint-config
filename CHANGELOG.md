@@ -1,3 +1,7 @@
+## [8.6.5](https://github.com/msobiecki/eslint-config/compare/v8.6.4...v8.6.5) (2024-05-27)
+
+
+
 ## [8.6.4](https://github.com/msobiecki/eslint-config/compare/v8.6.3...v8.6.4) (2024-05-22)
 
 
@@ -11,15 +15,6 @@
 
 
 ## [8.6.1](https://github.com/msobiecki/eslint-config/compare/v8.6.0...v8.6.1) (2024-05-07)
-
-
-
-# [8.6.0](https://github.com/msobiecki/eslint-config/compare/v8.5.0...v8.6.0) (2024-05-06)
-
-
-### Features
-
-* update ([60c733f](https://github.com/msobiecki/eslint-config/commit/60c733f76b2508522e68f7198b43c1d2f9971e91))
 
 
 
