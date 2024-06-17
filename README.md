@@ -41,6 +41,14 @@ To use this ESLint configuration, you need to extend it in your project's `.esli
 }
 ```
 
+### node configuration
+
+```json
+{
+  "extends": ["@msobiecki/eslint-config/node"]
+}
+```
+
 ### jest configuration
 
 #### base
