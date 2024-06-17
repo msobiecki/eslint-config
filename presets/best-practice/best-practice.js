@@ -14,7 +14,10 @@ module.exports = {
   overrides: [
     {
       files: ["**/*.ts?(x)"],
-      extends: ["plugin:jsdoc/recommended-typescript"],
+      extends: [
+        "plugin:jsdoc/recommended-typescript",
+        "plugin:deprecation/recommended",
+      ],
     },
   ],
 };
