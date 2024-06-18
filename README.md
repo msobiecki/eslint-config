@@ -15,6 +15,12 @@ Custom ESLint configuration for projects. It extends popular Airbnb ESLint confi
 npm install --save-dev @msobiecki/eslint-config
 ```
 
+Make sure to install the necessary peer dependencies as well:
+
+```bash
+npm install eslint prettier
+```
+
 ## Usage
 
 To use this ESLint configuration, you need to extend it in your project's `.eslintrc` file:
@@ -101,11 +107,6 @@ If you have an existing ESLint configuration, you can merge it with this configu
   "extends": ["@msobiecki/eslint-config", "your-existing-config"]
 }
 ```
-
-Make sure to install the necessary peer dependencies as well:
-
-- `eslint`
-- `prettier`
 
 ## License
 
