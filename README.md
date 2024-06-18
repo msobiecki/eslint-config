@@ -2,7 +2,12 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/msobiecki/eslint-config/blob/master/LICENSE)
 
-> Custom ESLint configuration for projects. It extends popular Airbnb ESLint config and other popular configs in one place.
+Custom ESLint configuration for projects. It extends popular Airbnb ESLint config and other popular configs in one place.
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
 ## Installation
 
@@ -102,14 +107,10 @@ Make sure to install the necessary peer dependencies as well:
 - `eslint`
 - `prettier`
 
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions, please open an issue or submit a pull request.
-
-Before submitting a pull request, please make sure to:
-
-1. Run `lintstage` to ensure your changes adhere to the ESLint rules.
-
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+Feel free to contribute to this repository by opening issues or submitting pull requests. Happy coding!
