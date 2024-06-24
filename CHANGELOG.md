@@ -1,3 +1,7 @@
+## [8.8.3](https://github.com/msobiecki/eslint-config/compare/v8.8.2...v8.8.3) (2024-06-24)
+
+
+
 ## [8.8.2](https://github.com/msobiecki/eslint-config/compare/v8.8.1...v8.8.2) (2024-06-18)
 
 
@@ -22,10 +26,6 @@
 ### Features
 
 * extend plugins ([8dcb942](https://github.com/msobiecki/eslint-config/commit/8dcb942347fd1df8acb872affd7922eac07bca7b))
-
-
-
-## [8.6.17](https://github.com/msobiecki/eslint-config/compare/v8.6.16...v8.6.17) (2024-06-17)
 
 
 
