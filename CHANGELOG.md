@@ -1,3 +1,7 @@
+## [8.8.19](https://github.com/msobiecki/eslint-config/compare/v8.8.18...v8.8.19) (2024-07-22)
+
+
+
 ## [8.8.18](https://github.com/msobiecki/eslint-config/compare/v8.8.17...v8.8.18) (2024-07-22)
 
 
@@ -11,10 +15,6 @@
 
 
 ## [8.8.15](https://github.com/msobiecki/eslint-config/compare/v8.8.14...v8.8.15) (2024-07-16)
-
-
-
-## [8.8.14](https://github.com/msobiecki/eslint-config/compare/v8.8.13...v8.8.14) (2024-07-16)
 
 
 
