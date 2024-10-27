@@ -5,6 +5,7 @@
 Custom ESLint configuration for projects. It extends popular Airbnb ESLint config and other popular configs in one place.
 
 ## Table of Contents
+
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
@@ -18,7 +19,7 @@ npm install --save-dev @msobiecki/eslint-config
 Make sure to install the necessary peer dependencies as well:
 
 ```bash
-npm install eslint prettier
+npm install --save-dev eslint prettier
 ```
 
 ## Usage
