@@ -50,7 +50,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run publish
-        uses: JS-DevTools/npm-publish@v1
+        uses: JS-DevTools/npm-publish@v3
         with:
           registry: https://npm.pkg.github.com/
           token: ${{ secrets.GITHUB_TOKEN }}
