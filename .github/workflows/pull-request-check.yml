@@ -33,7 +33,5 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: npm rebuild @swc/core --build-from-source
-
       - name: Run test
         run: npm run test
