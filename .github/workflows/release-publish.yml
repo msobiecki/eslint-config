@@ -2,7 +2,7 @@ name: Release publish
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   publish:
@@ -14,12 +14,12 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [20.x]
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -50,7 +50,14 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run publish
-        uses: JS-DevTools/npm-publish@v1
+        uses: JS-DevTools/npm-publish@v3
         with:
           registry: https://npm.pkg.github.com/
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run publish to NPMjs
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          registry: https://registry.npmjs.org/
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public

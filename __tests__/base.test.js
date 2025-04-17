@@ -16,6 +16,7 @@ describe("ESLint Flat Config Test Cases", () => {
 
   beforeEach(() => {
     eslint = new ESLint({
+      useEslintrc: false,
       overrideConfigFile: path.resolve(process.cwd(), "presets/base/base.js"),
     });
   });

@@ -1,20 +1,9 @@
-## [8.8.38](https://github.com/msobiecki/eslint-config/compare/v8.8.37...v8.8.38) (2024-10-16)
+## [8.9.13](https://github.com/msobiecki/eslint-config/compare/v8.9.12...v8.9.13) (2025-03-23)
 
+## [8.9.12](https://github.com/msobiecki/eslint-config/compare/v8.9.11...v8.9.12) (2025-03-23)
 
+## [8.9.11](https://github.com/msobiecki/eslint-config/compare/v8.9.10...v8.9.11) (2025-01-28)
 
-## [8.8.37](https://github.com/msobiecki/eslint-config/compare/v8.8.36...v8.8.37) (2024-10-15)
+## [8.9.10](https://github.com/msobiecki/eslint-config/compare/v8.9.9...v8.9.10) (2024-12-04)
 
-
-
-## [8.8.36](https://github.com/msobiecki/eslint-config/compare/v8.8.35...v8.8.36) (2024-10-07)
-
-
-
-## [8.8.35](https://github.com/msobiecki/eslint-config/compare/v8.8.34...v8.8.35) (2024-10-07)
-
-
-
-## [8.8.34](https://github.com/msobiecki/eslint-config/compare/v8.8.33...v8.8.34) (2024-09-26)
-
-
-
+## [8.9.9](https://github.com/msobiecki/eslint-config/compare/v8.9.8...v8.9.9) (2024-12-04)
