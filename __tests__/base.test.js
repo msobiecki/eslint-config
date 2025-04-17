@@ -3,7 +3,6 @@ import process from "node:process";
 
 import { ESLint } from "eslint";
 
-// Define ESLint test cases
 const testCases = [
   {
     file: "__tests__/cases/base/no-console.js",
@@ -11,7 +10,7 @@ const testCases = [
   },
 ];
 
-describe("ESLint Flat Config Test Cases", () => {
+describe("check ESLint test cases", () => {
   let eslint;
 
   beforeEach(() => {
