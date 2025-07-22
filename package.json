@@ -12,7 +12,7 @@
     "url": "https://github.com/msobiecki/eslint-config/issues"
   },
   "repository": {
-    "url": "git://git@github.com:msobiecki/eslint-config.git"
+    "url": "git://git@github.com/msobiecki/eslint-config.git"
   },
   "license": "MIT",
   "author": "Michał Sobiecki <kontakt@codeshaker.pl>",
