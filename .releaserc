@@ -20,10 +20,15 @@
       }
     ]
   ],
+  "npmPublish": true,
   "publish": [
     {
       "path": "@semantic-release/npm",
       "registry": "https://registry.npmjs.org/"
+    },
+    {
+      "path": "@semantic-release/npm",
+      "registry": "https://npm.pkg.github.com/"
     }
   ]
 }
