@@ -19,20 +19,5 @@
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ]
-  ],
-  "npmPublish": true,
-  "pkgRoot": ".",
-  "publish": [
-    {
-      "path": "@semantic-release/npm",
-      "registry": "https://registry.npmjs.org/"
-    },
-    {
-      "path": "@semantic-release/npm",
-      "registry": "https://npm.pkg.github.com/"
-    },
-    {
-      "path": "@semantic-release/github"
-    }
   ]
 }
