@@ -1,3 +1,10 @@
+# [8.22.0](https://github.com/msobiecki/eslint-config/compare/v8.21.0...v8.22.0) (2025-07-22)
+
+
+### Features
+
+* improve semantic release ([58ce928](https://github.com/msobiecki/eslint-config/commit/58ce928d03d21bf046ecb12eae60d3e1290c4322))
+
 # [8.21.0](https://github.com/msobiecki/eslint-config/compare/v8.20.0...v8.21.0) (2025-07-22)
 
 
