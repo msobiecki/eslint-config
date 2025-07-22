@@ -15,7 +15,6 @@ jobs:
       contents: write
       issues: write
       pull-requests: write
-      id-token: write
 
     strategy:
       matrix:
@@ -39,5 +38,11 @@ jobs:
       - name: Release with semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
+
+      - name: Run publish to NPMjs
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          registry: https://registry.npmjs.org/
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public
