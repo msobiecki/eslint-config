@@ -1,3 +1,10 @@
+# [8.28.0](https://github.com/msobiecki/eslint-config/compare/v8.27.0...v8.28.0) (2025-08-25)
+
+
+### Features
+
+* update react-hooks ([d0fcd8b](https://github.com/msobiecki/eslint-config/commit/d0fcd8be9ecc90655035206c0b93772e79cc2604))
+
 # [8.27.0](https://github.com/msobiecki/eslint-config/compare/v8.26.0...v8.27.0) (2025-08-25)
 
 
