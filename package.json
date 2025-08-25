@@ -68,9 +68,6 @@
     "eslint-config-next": {
       "@typescript-eslint/eslint-plugin": "^7.0.0",
       "@typescript-eslint/parser": "^7.0.0"
-    },
-    "eslint-config-airbnb": {
-      "eslint-plugin-react-hooks": "^5.2.0"
     }
   }
 }
