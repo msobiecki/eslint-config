@@ -1,11 +1,11 @@
 const fs = require("node:fs");
 const path = require("node:path");
 
-const geTsConfig = () => {
+const getTsConfig = () => {
   if (fs.existsSync("tsconfig.json")) return path.resolve("tsconfig.json");
   return fs.existsSync("../tsconfig.json")
     ? path.resolve("../tsconfig.json")
     : undefined;
 };
 
-module.exports = geTsConfig;
+module.exports = getTsConfig;
