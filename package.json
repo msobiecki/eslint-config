@@ -1,6 +1,6 @@
 {
   "name": "@msobiecki/eslint-config",
-  "version": "8.31.0",
+  "version": "8.32.0",
   "private": false,
   "description": "An ESLint shareable config for JavaScript/TypeScript ecosystem's.",
   "keywords": [
