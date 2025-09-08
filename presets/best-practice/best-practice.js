@@ -8,6 +8,13 @@ module.exports = {
     "plugin:compat/recommended",
     "plugin:prettier/recommended",
   ],
+  settings: {
+    jsdoc: {
+      tagNamePreference: {
+        swagger: "swagger",
+      },
+    },
+  },
   rules: {
     "unicorn/prefer-module": "off",
     "unicorn/no-useless-undefined": "off",
