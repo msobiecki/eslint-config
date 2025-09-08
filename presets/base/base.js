@@ -13,6 +13,14 @@ module.exports = {
       parserOptions: {
         project: getTsConfig(),
       },
+      rules: {
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            argsIgnorePattern: "^_",
+          },
+        ],
+      },
     },
   ],
 };
