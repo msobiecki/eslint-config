@@ -10,6 +10,8 @@ module.exports = {
   ],
   rules: {
     "unicorn/prefer-module": "off",
+    "unicorn/no-useless-undefined": "off",
+    "unicorn/prefer-top-level-await": "off",
   },
   overrides: [
     {
