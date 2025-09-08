@@ -9,7 +9,7 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   rules: {
-    "unicorn/prefer-module": ["off"],
+    "unicorn/prefer-module": "off",
   },
   overrides: [
     {
@@ -18,6 +18,12 @@ module.exports = {
         "plugin:jsdoc/recommended-typescript",
         "plugin:deprecation/recommended",
       ],
+    },
+    {
+      files: ["**/index.{js,ts}"],
+      rules: {
+        "import/prefer-default-export": "off",
+      },
     },
   ],
 };
