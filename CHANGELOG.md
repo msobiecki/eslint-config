@@ -1,3 +1,10 @@
+# [8.35.0](https://github.com/msobiecki/eslint-config/compare/v8.34.0...v8.35.0) (2025-09-08)
+
+
+### Features
+
+* update ([7b2ff0c](https://github.com/msobiecki/eslint-config/commit/7b2ff0cf977199f972c350861e8c8deaafa45785))
+
 # [8.34.0](https://github.com/msobiecki/eslint-config/compare/v8.33.0...v8.34.0) (2025-09-08)
 
 
