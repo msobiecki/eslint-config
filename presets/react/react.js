@@ -33,8 +33,8 @@ module.exports = {
     },
     {
       files: [
-        "contexts/**/*.{js,jsx,ts,tsx}",
-        "components/**/*.{js,jsx,ts,tsx}",
+        "**/contexts/**/*.{js,jsx,ts,tsx}",
+        "**/components/**/*.{js,jsx,ts,tsx}",
       ],
       rules: {
         "unicorn/filename-case": [
@@ -50,8 +50,8 @@ module.exports = {
     {
       files: ["**/*.{js,jsx,ts,tsx}"],
       excludedFiles: [
-        "contexts/**/*.{js,jsx,ts,tsx}",
-        "components/**/*.{js,jsx,ts,tsx}",
+        "**/contexts/**/*.{js,jsx,ts,tsx}",
+        "**/components/**/*.{js,jsx,ts,tsx}",
       ],
       rules: {
         "unicorn/filename-case": [
