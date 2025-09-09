@@ -1,3 +1,10 @@
+## [8.38.1](https://github.com/msobiecki/eslint-config/compare/v8.38.0...v8.38.1) (2025-09-09)
+
+
+### Bug Fixes
+
+* change glob ([1be2349](https://github.com/msobiecki/eslint-config/commit/1be234927643c4acb093919919fedaad6c811127))
+
 # [8.38.0](https://github.com/msobiecki/eslint-config/compare/v8.37.0...v8.38.0) (2025-09-09)
 
 
