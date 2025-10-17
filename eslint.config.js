@@ -26,7 +26,6 @@ import getTsConfig from "./utils/get-ts-config.js";
  */
 export const base = [
   {
-    ...js.configs.recommended,
     files: ["**/*.{js,mjs,cjs,jsx}"],
     plugins: {
       prettier: prettierPlugin,
@@ -38,6 +37,7 @@ export const base = [
       compat,
     },
     rules: {
+      ...js.configs.recommended.rules,
       ...eslintComments.configs?.recommended?.rules,
       ...unicorn.configs?.recommended?.rules,
       ...promise.configs?.recommended?.rules,
