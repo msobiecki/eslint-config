@@ -35,11 +35,7 @@ import { defineConfig } from "eslint/config";
 import eslintConfig from "@msobiecki/eslint-config";
 
 export default defineConfig([
-  ...eslintConfig.base,
-  ...eslintConfig.reactPreset,
-  ...eslintConfig.next,
-  ...eslintConfig.node,
-  ...eslintConfig.jest,
+  eslintConfig
 ]);
 ```
 
@@ -47,45 +43,60 @@ export default defineConfig([
 
 ```javascript
 import { defineConfig } from "eslint/config";
-import eslintConfig from "@msobiecki/eslint-config";
+import { base } from "@msobiecki/eslint-config";
 
-export default defineConfig([...eslintConfig.base]);
+export default defineConfig([
+  base,
+  ...
+]);
 ```
 
 ### react javascript/typescript configuration
 
 ```javascript
 import { defineConfig } from "eslint/config";
-import eslintConfig from "@msobiecki/eslint-config";
+import { react } from "@msobiecki/eslint-config";
 
-export default defineConfig([...eslintConfig.reactPreset]);
+export default defineConfig([
+  ...,
+  react
+]);
 ```
 
 ### next configuration
 
 ```javascript
 import { defineConfig } from "eslint/config";
-import eslintConfig from "@msobiecki/eslint-config";
+import { next } from "@msobiecki/eslint-config";
 
-export default defineConfig([...eslintConfig.next]);
+export default defineConfig([
+  ...,
+  next
+]);
 ```
 
 ### node configuration
 
 ```javascript
 import { defineConfig } from "eslint/config";
-import eslintConfig from "@msobiecki/eslint-config";
+import { node } from "@msobiecki/eslint-config";
 
-export default defineConfig([...eslintConfig.node]);
+export default defineConfig([
+  ...,
+  node
+]);
 ```
 
 ### jest configuration
 
 ```javascript
 import { defineConfig } from "eslint/config";
-import eslintConfig from "@msobiecki/eslint-config";
+import {jest} from "@msobiecki/eslint-config";
 
-export default defineConfig([...eslintConfig.jest]);
+export default defineConfig([
+  ...,
+  jest
+]);
 ```
 
 ## License
