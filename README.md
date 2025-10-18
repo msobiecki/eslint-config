@@ -24,7 +24,7 @@ npm install --save-dev eslint prettier typescript
 
 ## Usage
 
-To use this ESLint configuration, you need to extend it in your project's `eslint.config.js` file:
+To use this ESLint Flat Config configuration, you need to extend it in your project's `eslint.config.js` file:
 
 ### base javascript/typescript configuration
 
@@ -37,7 +37,6 @@ export default defineConfig([
   ...
 ]);
 ```
-
 
 ### best practice configuration
 
@@ -110,7 +109,6 @@ export default defineConfig([
   jestPreset
 ]);
 ```
-
 
 ### storybook configuration
 
