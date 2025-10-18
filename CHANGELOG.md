@@ -1,3 +1,10 @@
+# [9.1.0](https://github.com/msobiecki/eslint-config/compare/v9.0.0...v9.1.0) (2025-10-18)
+
+
+### Features
+
+* update react ([39b0817](https://github.com/msobiecki/eslint-config/commit/39b08174581bb111db248f12b3938878cf91dcc8))
+
 # [9.0.0](https://github.com/msobiecki/eslint-config/compare/v8.40.0...v9.0.0) (2025-10-18)
 
 
