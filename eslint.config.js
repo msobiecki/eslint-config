@@ -1,56 +1,47 @@
 import { defineConfig } from "eslint/config";
 
-import js from "@eslint/js";
+import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 
-import reactBase from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
+import reactBasePlugin from "eslint-plugin-react";
+import reactHooksPlugin from "eslint-plugin-react-hooks";
 import nPlugin from "eslint-plugin-n";
 import nextPlugin from "@next/eslint-plugin-next";
 import jestPlugin from "eslint-plugin-jest";
 import jestDomPlugin from "eslint-plugin-jest-dom";
-import testingLibrary from "eslint-plugin-testing-library";
+import testingLibraryPlugin from "eslint-plugin-testing-library";
 import prettierPlugin from "eslint-plugin-prettier";
-import eslintComments from "eslint-plugin-eslint-comments";
-import unicorn from "eslint-plugin-unicorn";
-import promise from "eslint-plugin-promise";
-import security from "eslint-plugin-security";
-import jsdoc from "eslint-plugin-jsdoc";
-import compat from "eslint-plugin-compat";
-import jsxA11y from "eslint-plugin-jsx-a11y";
+import eslintCommentsPlugin from "eslint-plugin-eslint-comments";
+import unicornPlugin from "eslint-plugin-unicorn";
+import promisePlugin from "eslint-plugin-promise";
+import securityPlugin from "eslint-plugin-security";
+import jsdocPlugin from "eslint-plugin-jsdoc";
+import compatPlugin from "eslint-plugin-compat";
+import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
+import importPlugin from "eslint-plugin-import";
+import storybookPlugin from "eslint-plugin-storybook";
 
 import getTsConfig from "./utils/get-ts-config.js";
+
+import baseCustomRules from "./rules/base.js";
+import nodeRules from "./rules/node.js";
 
 /**
  * Base / best-practice preset
  */
-export const base = [
+export const basePreset = [
   {
-    files: ["**/*.{js,mjs,cjs,jsx}"],
-    plugins: {
-      prettier: prettierPlugin,
-      "eslint-comments": eslintComments,
-      unicorn,
-      promise,
-      security,
-      jsdoc,
-      compat,
-    },
+    name: "Base JavaScript",
+    files: ["**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts}"],
     rules: {
-      ...js.configs.recommended.rules,
-      ...eslintComments.configs?.recommended?.rules,
-      ...unicorn.configs?.recommended?.rules,
-      ...promise.configs?.recommended?.rules,
-      ...security.configs?.recommended?.rules,
-      ...jsdoc.configs?.recommended?.rules,
-      ...compat.configs?.recommended?.rules,
-      ...prettierPlugin.configs?.recommended?.rules,
+      ...eslint.configs.recommended.rules,
+      // Custom best-practice rules
+      ...baseCustomRules,
     },
-    settings: { jsdoc: { tagNamePreference: { swagger: "swagger" } } },
   },
-  // TypeScript-specific override
   {
-    files: ["**/*.{ts,tsx,mts,cts}"],
+    name: "Base TypeScript",
+    files: ["**/*.{ts,tsx,cts,mts}"],
     languageOptions: {
       sourceType: "module",
       parser: tseslint.parser,
@@ -60,34 +51,57 @@ export const base = [
     rules: {
       ...tseslint.configs?.strict?.[2]?.rules,
       ...tseslint.configs?.stylistic?.[2]?.rules,
-      ...jsdoc.configs?.["recommended-typescript"]?.rules,
     },
   },
-  // Index file override
+];
+
+/**
+ * Best-practice preset
+ */
+export const bestPracticePreset = [
   {
-    files: ["**/index.{js,ts}"],
-    rules: { "import/prefer-default-export": "off" },
+    name: "Best Practices",
+    files: ["**/*.{js,ts,mjs,mts,cjs,cts,jsx,tsx}"],
+    plugins: {
+      prettier: prettierPlugin,
+      "eslint-comments": eslintCommentsPlugin,
+      unicorn: unicornPlugin,
+      promise: promisePlugin,
+      security: securityPlugin,
+      jsdoc: jsdocPlugin,
+      compat: compatPlugin,
+    },
+    rules: {
+      ...jsdocPlugin.configs?.["flat/recommended-mixed"]?.rules,
+      ...eslintCommentsPlugin.configs?.recommended?.rules,
+      ...promisePlugin.configs?.recommended?.rules,
+      ...securityPlugin.configs?.recommended?.rules,
+      ...compatPlugin.configs?.recommended?.rules,
+      ...unicornPlugin.configs?.recommended?.rules,
+      ...prettierPlugin.configs?.recommended?.rules,
+    },
   },
 ];
 
 /**
  * React preset
  */
-export const react = [
+export const reactPreset = [
   {
+    name: "React",
     files: ["**/*.{js,jsx,ts,tsx}"],
     plugins: {
-      react: reactBase,
-      "react-hooks": reactHooks,
-      "jsx-a11y": jsxA11y,
+      react: reactBasePlugin,
+      "react-hooks": reactHooksPlugin,
+      "jsx-a11y": jsxA11yPlugin,
     },
     languageOptions: {
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
     rules: {
-      ...reactBase.configs?.recommended?.rules,
-      ...reactHooks.configs?.flat?.recommended?.rules,
-      ...jsxA11y.configs?.recommended?.rules,
+      ...reactBasePlugin.configs?.recommended?.rules,
+      ...reactHooksPlugin.configs?.flat?.recommended?.rules,
+      ...jsxA11yPlugin.configs?.recommended?.rules,
     },
     settings: { react: { version: "detect" } },
   },
@@ -96,19 +110,21 @@ export const react = [
 /**
  * Node preset
  */
-export const node = [
+export const nodePreset = [
   {
+    name: "Node.js",
     files: ["**/*.{js,mjs,cjs}"],
     plugins: { n: nPlugin },
-    rules: { ...nPlugin.configs?.["flat/recommended"]?.rules },
+    rules: { ...nPlugin.configs?.["flat/recommended"]?.rules, ...nodeRules },
   },
 ];
 
 /**
  * Next.js preset
  */
-export const next = [
+export const nextPreset = [
   {
+    name: "Next.js",
     files: ["**/*.{js,ts,jsx,tsx}"],
     plugins: { "@next/next": nextPlugin },
     rules: { ...nextPlugin.configs?.recommended?.rules },
@@ -116,10 +132,33 @@ export const next = [
 ];
 
 /**
+ * Import plugin preset
+ */
+export const importPreset = [
+  {
+    name: "Import plugin",
+    files: ["**/*.{js,jsx,mjs,cjs}"],
+    plugins: { import: importPlugin },
+    rules: {
+      ...importPlugin.configs?.recommended?.rules,
+    },
+  },
+  {
+    name: "Import plugin TypeScript",
+    files: ["**/*.{ts,tsx,mts,cts}"],
+    plugins: { import: importPlugin },
+    rules: {
+      ...importPlugin.configs?.["recommended-typescript"]?.rules,
+    },
+  },
+];
+
+/**
  * Jest preset
  */
-export const jest = [
+export const jestPreset = [
   {
+    name: "Jest",
     files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
     plugins: { jest: jestPlugin },
     rules: {
@@ -128,21 +167,49 @@ export const jest = [
     },
   },
   {
+    name: "Jest DOM & Testing Library",
     files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
-    plugins: { "jest-dom": jestDomPlugin, "testing-library": testingLibrary },
+    plugins: {
+      "jest-dom": jestDomPlugin,
+      "testing-library": testingLibraryPlugin,
+    },
     rules: {
       ...jestDomPlugin.configs?.recommended?.rules,
-      ...testingLibrary.configs?.dom?.rules,
+      ...testingLibraryPlugin.configs?.dom?.rules,
     },
   },
   {
+    name: "Testing Library React",
     files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
-    plugins: { "testing-library": testingLibrary },
-    rules: { ...testingLibrary.configs?.react?.rules },
+    plugins: { "testing-library": testingLibraryPlugin },
+    rules: { ...testingLibraryPlugin.configs?.react?.rules },
+  },
+];
+
+/**
+ * Storybook preset
+ */
+export const storybookPreset = [
+  {
+    name: "Storybook",
+    files: ["**/*.stories.{js,ts,jsx,tsx}"],
+    plugins: { storybook: storybookPlugin },
+    rules: {
+      ...storybookPlugin?.configs?.["flat/recommended"]?.rules,
+    },
   },
 ];
 
 /**
  * Full default export (all presets)
  */
-export default defineConfig([...base, ...react, ...node, ...next, ...jest]);
+export default defineConfig([
+  ...basePreset,
+  ...bestPracticePreset,
+  // ...importPreset,
+  // ...reactPreset,
+  // ...nodePreset,
+  // ...nextPreset,
+  // ...jestPreset,
+  // ...storybookPreset,
+]);

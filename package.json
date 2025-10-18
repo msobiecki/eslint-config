@@ -19,8 +19,9 @@
   "type": "module",
   "main": "eslint.config.js",
   "scripts": {
+    "inspect": "npx eslint --inspect-config",
     "prepare": "husky",
-    "test": "jest",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
     "test:watch": "jest --watch"
   },
   "dependencies": {
@@ -49,8 +50,6 @@
     "@commitlint/config-conventional": "^20.0.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@swc/core": "^1.13.5",
-    "@swc/jest": "^0.2.39",
     "@types/jest": "^30.0.0",
     "eslint": "^9.37.0",
     "husky": "^9.1.7",

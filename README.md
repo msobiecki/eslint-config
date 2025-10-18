@@ -43,11 +43,36 @@ export default defineConfig([
 
 ```javascript
 import { defineConfig } from "eslint/config";
-import { base } from "@msobiecki/eslint-config";
+import { basePreset } from "@msobiecki/eslint-config";
 
 export default defineConfig([
-  base,
+  basePreset,
   ...
+]);
+```
+
+
+### best practice configuration
+
+```javascript
+import { defineConfig } from "eslint/config";
+import { bestPracticePreset } from "@msobiecki/eslint-config";
+
+export default defineConfig([
+  ...,
+  bestPracticePreset,
+]);
+```
+
+### import configuration
+
+```javascript
+import { defineConfig } from "eslint/config";
+import { importPreset } from "@msobiecki/eslint-config";
+
+export default defineConfig([
+  ...,
+  importPreset,
 ]);
 ```
 
@@ -55,11 +80,11 @@ export default defineConfig([
 
 ```javascript
 import { defineConfig } from "eslint/config";
-import { react } from "@msobiecki/eslint-config";
+import { reactPreset } from "@msobiecki/eslint-config";
 
 export default defineConfig([
   ...,
-  react
+  reactPreset
 ]);
 ```
 
@@ -67,11 +92,11 @@ export default defineConfig([
 
 ```javascript
 import { defineConfig } from "eslint/config";
-import { next } from "@msobiecki/eslint-config";
+import { nextPreset } from "@msobiecki/eslint-config";
 
 export default defineConfig([
   ...,
-  next
+  nextPreset
 ]);
 ```
 
@@ -91,11 +116,24 @@ export default defineConfig([
 
 ```javascript
 import { defineConfig } from "eslint/config";
-import {jest} from "@msobiecki/eslint-config";
+import { jestPreset } from "@msobiecki/eslint-config";
 
 export default defineConfig([
   ...,
-  jest
+  jestPreset
+]);
+```
+
+
+### storybook configuration
+
+```javascript
+import { defineConfig } from "eslint/config";
+import { storybookPreset } from "@msobiecki/eslint-config";
+
+export default defineConfig([
+  ...,
+  storybookPreset,
 ]);
 ```
 
