@@ -1,3 +1,15 @@
+# [9.0.0](https://github.com/msobiecki/eslint-config/compare/v8.40.0...v9.0.0) (2025-10-18)
+
+
+### chore
+
+* **eslint:** update to ESLint 9 and migrate to flat config ([e0be675](https://github.com/msobiecki/eslint-config/commit/e0be67505419e761ea645b6aff484e495089d6ad))
+
+
+### BREAKING CHANGES
+
+* **eslint:** The ESLint configuration has been migrated to the new flat config.
+
 # [8.40.0](https://github.com/msobiecki/eslint-config/compare/v8.39.0...v8.40.0) (2025-10-18)
 
 
