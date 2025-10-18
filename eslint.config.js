@@ -99,7 +99,8 @@ export const reactPreset = [
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
     rules: {
-      ...reactBasePlugin.configs?.recommended?.rules,
+      ...reactBasePlugin.configs?.flat?.recommended?.rules,
+      ...reactBasePlugin.configs?.flat?.["jsx-runtime"]?.rules,
       ...reactHooksPlugin.configs?.flat?.recommended?.rules,
       ...jsxA11yPlugin.configs?.recommended?.rules,
     },
