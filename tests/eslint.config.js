@@ -2,12 +2,14 @@ import { defineConfig } from "eslint/config";
 
 import {
   basePreset,
-  bestPracticePreset,
+  nodePreset,
   jestPreset,
+  bestPracticePreset,
 } from "../eslint.config.js";
 
 export default defineConfig([
   ...basePreset,
+  ...nodePreset,
   ...jestPreset,
   ...bestPracticePreset,
 ]);

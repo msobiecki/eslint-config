@@ -115,6 +115,11 @@ export const nodePreset = [
   {
     name: "Node.js",
     files: ["**/*.{js,mjs,cjs}"],
+    languageOptions: {
+      globals: {
+        ...nPlugin.configs?.["flat/recommended"]?.languageOptions?.globals,
+      },
+    },
     plugins: { n: nPlugin },
     rules: { ...nPlugin.configs?.["flat/recommended"]?.rules, ...nodeRules },
   },
@@ -164,7 +169,6 @@ export const jestPreset = [
     languageOptions: {
       globals: {
         ...jestPlugin.configs?.["flat/recommended"]?.languageOptions?.globals,
-        process: "readonly",
       },
     },
     plugins: { jest: jestPlugin },
