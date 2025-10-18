@@ -83,6 +83,8 @@ const config = {
   //   "cjs",
   //   "jsx",
   //   "ts",
+  //   "mts",
+  //   "cts",
   //   "tsx",
   //   "json",
   //   "node"
@@ -155,12 +157,12 @@ const config = {
 
   // The glob patterns Jest uses to detect test files
   // testMatch: [
-  //   "**/__tests__/**/*.[jt]s?(x)",
-  //   "**/?(*.)+(spec|test).[tj]s?(x)"
+  //   "**/__tests__/**/*.?([mc])[jt]s?(x)",
+  //   "**/?(*.)+(spec|test).?([mc])[jt]s?(x)"
   // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: ["/__tests__/test-cases/"],
+  // testPathIgnorePatterns: ["/node_modules/"],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
@@ -172,7 +174,7 @@ const config = {
   // testRunner: "jest-circus/runner",
 
   // A map from regular expressions to paths to transformers
-  transform: { "^.+\\.js$": "@swc/jest" },
+  // transform: {},
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
@@ -193,4 +195,4 @@ const config = {
   // watchman: true,
 };
 
-module.exports = config;
+export default config;

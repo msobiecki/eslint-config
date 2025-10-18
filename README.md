@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/msobiecki/eslint-config/blob/master/LICENSE)
 
-Custom ESLint configuration for projects. It extends popular Airbnb ESLint config and other popular configs in one place.
+Custom ESLint configuration for projects. It extends popular configs in one place.
 
 ## Table of Contents
 
@@ -19,94 +19,109 @@ npm install --save-dev @msobiecki/eslint-config
 Make sure to install the necessary peer dependencies as well:
 
 ```bash
-npm install --save-dev eslint prettier
+npm install --save-dev eslint prettier typescript
 ```
 
 ## Usage
 
-To use this ESLint configuration, you need to extend it in your project's `.eslintrc` file:
+To use this ESLint configuration, you need to extend it in your project's `eslint.config.js` file:
 
 ### base javascript/typescript configuration
 
-```json
-{
-  "extends": "@msobiecki/eslint-config"
-}
+```javascript
+import { defineConfig } from "eslint/config";
+import { basePreset } from "@msobiecki/eslint-config";
+
+export default defineConfig([
+  basePreset,
+  ...
+]);
+```
+
+
+### best practice configuration
+
+```javascript
+import { defineConfig } from "eslint/config";
+import { bestPracticePreset } from "@msobiecki/eslint-config";
+
+export default defineConfig([
+  ...,
+  bestPracticePreset,
+]);
+```
+
+### import configuration
+
+```javascript
+import { defineConfig } from "eslint/config";
+import { importPreset } from "@msobiecki/eslint-config";
+
+export default defineConfig([
+  ...,
+  importPreset,
+]);
 ```
 
 ### react javascript/typescript configuration
 
-```json
-{
-  "extends": [
-    "@msobiecki/eslint-config/react",
-    "@msobiecki/eslint-config/react-jsx"
-  ]
-}
+```javascript
+import { defineConfig } from "eslint/config";
+import { reactPreset } from "@msobiecki/eslint-config";
+
+export default defineConfig([
+  ...,
+  reactPreset
+]);
 ```
 
 ### next configuration
 
-```json
-{
-  "extends": ["@msobiecki/eslint-config/next"]
-}
+```javascript
+import { defineConfig } from "eslint/config";
+import { nextPreset } from "@msobiecki/eslint-config";
+
+export default defineConfig([
+  ...,
+  nextPreset
+]);
 ```
 
 ### node configuration
 
-```json
-{
-  "extends": ["@msobiecki/eslint-config/node"]
-}
+```javascript
+import { defineConfig } from "eslint/config";
+import { node } from "@msobiecki/eslint-config";
+
+export default defineConfig([
+  ...,
+  node
+]);
 ```
 
 ### jest configuration
 
-#### base
+```javascript
+import { defineConfig } from "eslint/config";
+import { jestPreset } from "@msobiecki/eslint-config";
 
-```json
-{
-  "extends": ["@msobiecki/eslint-config/jest"]
-}
+export default defineConfig([
+  ...,
+  jestPreset
+]);
 ```
 
-#### dom
 
-```json
-{
-  "extends": [
-    "@msobiecki/eslint-config/jest",
-    "@msobiecki/eslint-config/jest-dom"
-  ]
-}
-```
+### storybook configuration
 
-#### react
+```javascript
+import { defineConfig } from "eslint/config";
+import { storybookPreset } from "@msobiecki/eslint-config";
 
-```json
-{
-  "extends": [
-    "@msobiecki/eslint-config/jest",
-    "@msobiecki/eslint-config/jest-react"
-  ]
-}
-```
-
-### best practice configuration
-
-```json
-{
-  "extends": ["@msobiecki/eslint-config/best-practice"]
-}
-```
-
-If you have an existing ESLint configuration, you can merge it with this configuration using the `extends` property:
-
-```json
-{
-  "extends": ["@msobiecki/eslint-config", "your-existing-config"]
-}
+export default defineConfig([
+  ...,
+  storybookPreset,
+]);
 ```
 
 ## License
