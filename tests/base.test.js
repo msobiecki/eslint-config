@@ -9,6 +9,7 @@ const dirname = path.dirname(filename);
 
 const configPath = path.resolve(process.cwd(), "eslint.config.js");
 const configModule = await import(configPath);
+
 const eslint = new ESLint({
   overrideConfigFile: true,
   overrideConfig: configModule.default ?? configModule,
@@ -17,7 +18,6 @@ const eslint = new ESLint({
 describe("check base rules", () => {
   const testDirectory = path.join(dirname, "test-cases", "base");
   const testFiles = fs.readdirSync(testDirectory);
-
 
   testFiles.forEach((file) => {
     const ruleId = path.basename(file, ".js");

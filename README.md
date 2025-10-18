@@ -24,20 +24,7 @@ npm install --save-dev eslint prettier typescript
 
 ## Usage
 
-To use this ESLint configuration, you need to extend it in your project's `.eslintrc` file:
-
-### Includes all presets in one config for full-stack projects.
-
-This configuration combines base, React, Next.js, Node, and Jest presets, providing a single setup for full-stack applications.
-
-```javascript
-import { defineConfig } from "eslint/config";
-import eslintConfig from "@msobiecki/eslint-config";
-
-export default defineConfig([
-  eslintConfig
-]);
-```
+To use this ESLint configuration, you need to extend it in your project's `eslint.config.js` file:
 
 ### base javascript/typescript configuration
 

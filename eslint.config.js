@@ -1,5 +1,3 @@
-import { defineConfig } from "eslint/config";
-
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 
@@ -79,6 +77,8 @@ export const bestPracticePreset = [
       ...compatPlugin.configs?.recommended?.rules,
       ...unicornPlugin.configs?.recommended?.rules,
       ...prettierPlugin.configs?.recommended?.rules,
+
+      "unicorn/no-array-for-each": "off",
     },
   },
 ];
@@ -160,9 +160,15 @@ export const jestPreset = [
   {
     name: "Jest",
     files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+    languageOptions: {
+      globals: {
+        ...jestPlugin.configs?.["flat/recommended"]?.languageOptions?.globals,
+        process: "readonly",
+      },
+    },
     plugins: { jest: jestPlugin },
     rules: {
-      ...jestPlugin.configs?.recommended?.rules,
+      ...jestPlugin.configs?.["flat/recommended"]?.rules,
       ...jestPlugin.configs?.style?.rules,
     },
   },
@@ -200,16 +206,4 @@ export const storybookPreset = [
   },
 ];
 
-/**
- * Full default export (all presets)
- */
-export default defineConfig([
-  ...basePreset,
-  ...bestPracticePreset,
-  // ...importPreset,
-  // ...reactPreset,
-  // ...nodePreset,
-  // ...nextPreset,
-  // ...jestPreset,
-  // ...storybookPreset,
-]);
+export default [...basePreset, ...bestPracticePreset];
