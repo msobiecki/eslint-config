@@ -1,3 +1,10 @@
+# [8.40.0](https://github.com/msobiecki/eslint-config/compare/v8.39.0...v8.40.0) (2025-10-18)
+
+
+### Features
+
+* new breaking base ([bb815f3](https://github.com/msobiecki/eslint-config/commit/bb815f3cb572cb541ce96705112d72753d6d8dea))
+
 # [8.39.0](https://github.com/msobiecki/eslint-config/compare/v8.38.2...v8.39.0) (2025-10-18)
 
 
