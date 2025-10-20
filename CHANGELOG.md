@@ -1,3 +1,10 @@
+# [9.9.0](https://github.com/msobiecki/eslint-config/compare/v9.8.0...v9.9.0) (2025-10-20)
+
+
+### Features
+
+* update node ([a2eefd3](https://github.com/msobiecki/eslint-config/commit/a2eefd356940d535c9423b91e73b5135e5e36986))
+
 # [9.8.0](https://github.com/msobiecki/eslint-config/compare/v9.7.0...v9.8.0) (2025-10-20)
 
 
