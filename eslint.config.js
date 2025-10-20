@@ -82,6 +82,21 @@ export const bestPracticePreset = [
       "unicorn/no-array-for-each": "off",
     },
   },
+  {
+    name: "Filename Cases for JSX/TSX",
+    files: ["**/*.{jsx,tsx}"],
+    rules: {
+      "unicorn/filename-case": [
+        "error",
+        {
+          cases: {
+            camelCase: true,
+            pascalCase: true,
+          },
+        },
+      ],
+    },
+  },
 ];
 
 /**
@@ -98,6 +113,9 @@ export const reactPreset = [
     },
     languageOptions: {
       parserOptions: { ecmaFeatures: { jsx: true } },
+      globals: {
+        ...globals.browser,
+      },
     },
     rules: {
       ...reactBasePlugin.configs?.flat?.recommended?.rules,
