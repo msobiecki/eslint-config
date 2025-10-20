@@ -115,10 +115,10 @@ export const reactPreset = [
 export const nodePreset = [
   {
     name: "Node.js",
-    files: ["**/*.{js,mjs,cjs}"],
+    files: ["**/*.{js,mjs,cjs,ts,cts,mts}"],
     languageOptions: {
       globals: {
-        ...globals.browser,
+        ...globals.node,
       },
     },
     plugins: { n: nPlugin },
