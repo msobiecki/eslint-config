@@ -1,5 +1,6 @@
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
+import globals from "globals";
 
 import reactBasePlugin from "eslint-plugin-react";
 import reactHooksPlugin from "eslint-plugin-react-hooks";
@@ -117,7 +118,7 @@ export const nodePreset = [
     files: ["**/*.{js,mjs,cjs}"],
     languageOptions: {
       globals: {
-        ...nPlugin.configs?.["flat/recommended"]?.languageOptions?.globals,
+        ...globals.browser,
       },
     },
     plugins: { n: nPlugin },
@@ -168,7 +169,8 @@ export const jestPreset = [
     files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
     languageOptions: {
       globals: {
-        ...jestPlugin.configs?.["flat/recommended"]?.languageOptions?.globals,
+        ...globals.node,
+        ...globals.jest,
       },
     },
     plugins: { jest: jestPlugin },
