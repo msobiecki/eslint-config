@@ -115,7 +115,18 @@ export const reactPreset = [
 export const nodePreset = [
   {
     name: "Node.js",
-    files: ["**/*.{js,mjs,cjs,ts,cts,mts}"],
+    files: ["**/*.{js,mjs,cjs}"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
+    plugins: { n: nPlugin },
+    rules: { ...nPlugin.configs?.["flat/recommended"]?.rules, ...nodeRules },
+  },
+  {
+    name: "Node.js TypeScript",
+    files: ["**/*.{ts,cts,mts}"],
     languageOptions: {
       globals: {
         ...globals.node,
@@ -147,7 +158,7 @@ export const importPreset = [
     files: ["**/*.{js,jsx,mjs,cjs}"],
     plugins: { import: importPlugin },
     rules: {
-      ...importPlugin.configs?.recommended?.rules,
+      ...importPlugin.flatConfigs?.recommended?.rules,
     },
   },
   {
@@ -155,7 +166,8 @@ export const importPreset = [
     files: ["**/*.{ts,tsx,mts,cts}"],
     plugins: { import: importPlugin },
     rules: {
-      ...importPlugin.configs?.["recommended-typescript"]?.rules,
+      ...importPlugin.flatConfigs?.recommended?.rules,
+      ...importPlugin.flatConfigs?.typescript?.rules,
     },
   },
 ];
