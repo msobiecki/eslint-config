@@ -163,11 +163,6 @@ export const importPreset = [
     rules: {
       ...importxPlugin.flatConfigs?.recommended?.rules,
     },
-    settings: {
-      "import/resolver": {
-        node: true,
-      },
-    },
   },
   {
     name: "Import plugin TypeScript",
@@ -182,9 +177,6 @@ export const importPreset = [
     },
     settings: {
       ...importxPlugin.flatConfigs?.typescript?.settings,
-      "import/resolver": {
-        typescript: true,
-      },
     },
   },
 ];
