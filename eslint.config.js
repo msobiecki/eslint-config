@@ -17,7 +17,7 @@ import securityPlugin from "eslint-plugin-security";
 import jsdocPlugin from "eslint-plugin-jsdoc";
 import compatPlugin from "eslint-plugin-compat";
 import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
-import importPlugin from "eslint-plugin-import";
+import importxPlugin from "eslint-plugin-import-x";
 import storybookPlugin from "eslint-plugin-storybook";
 
 import getTsConfig from "./utils/get-ts-config.js";
@@ -156,27 +156,35 @@ export const importPreset = [
   {
     name: "Import plugin",
     files: ["**/*.{js,jsx,mjs,cjs}"],
-    plugins: { import: importPlugin },
+    plugins: { "import-x": importxPlugin },
     languageOptions: {
-      ...importPlugin.flatConfigs?.recommended?.languageOptions,
+      ...importxPlugin.flatConfigs?.recommended?.languageOptions,
     },
     rules: {
-      ...importPlugin.flatConfigs?.recommended?.rules,
+      ...importxPlugin.flatConfigs?.recommended?.rules,
+    },
+    settings: {
+      "import/resolver": {
+        node: true,
+      },
     },
   },
   {
     name: "Import plugin TypeScript",
     files: ["**/*.{ts,tsx,mts,cts}"],
-    plugins: { import: importPlugin },
+    plugins: { "import-x": importxPlugin },
     languageOptions: {
-      ...importPlugin.flatConfigs?.recommended?.languageOptions,
+      ...importxPlugin.flatConfigs?.recommended?.languageOptions,
     },
     rules: {
-      ...importPlugin.flatConfigs?.recommended?.rules,
-      ...importPlugin.flatConfigs?.typescript?.rules,
+      ...importxPlugin.flatConfigs?.recommended?.rules,
+      ...importxPlugin.flatConfigs?.typescript?.rules,
     },
     settings: {
-      ...importPlugin.flatConfigs?.typescript?.settings,
+      ...importxPlugin.flatConfigs?.typescript?.settings,
+      "import/resolver": {
+        typescript: true,
+      },
     },
   },
 ];

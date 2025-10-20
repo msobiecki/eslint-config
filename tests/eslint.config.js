@@ -5,6 +5,7 @@ import {
   nodePreset,
   jestPreset,
   bestPracticePreset,
+  importPreset,
 } from "../eslint.config.js";
 
 export default defineConfig([
@@ -12,4 +13,5 @@ export default defineConfig([
   ...bestPracticePreset,
   ...nodePreset,
   ...jestPreset,
+  ...importPreset,
 ]);
