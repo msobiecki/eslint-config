@@ -156,6 +156,11 @@ export const importPreset = [
   {
     name: "Import plugin",
     files: ["**/*.{js,jsx,mjs,cjs}"],
+    languageOptions: {
+      globals: {
+        ...importPlugin.flatConfigs?.recommended?.languageOptions,
+      },
+    },
     plugins: { import: importPlugin },
     rules: {
       ...importPlugin.flatConfigs?.recommended?.rules,
@@ -164,10 +169,18 @@ export const importPreset = [
   {
     name: "Import plugin TypeScript",
     files: ["**/*.{ts,tsx,mts,cts}"],
+    languageOptions: {
+      globals: {
+        ...importPlugin.flatConfigs?.recommended?.languageOptions,
+      },
+    },
     plugins: { import: importPlugin },
     rules: {
       ...importPlugin.flatConfigs?.recommended?.rules,
       ...importPlugin.flatConfigs?.typescript?.rules,
+    },
+    settings: {
+      ...importPlugin.flatConfigs?.typescript?.settings,
     },
   },
 ];
