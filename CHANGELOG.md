@@ -1,42 +1,42 @@
-# [9.1.0](https://github.com/msobiecki/eslint-config/compare/v9.0.0...v9.1.0) (2025-10-18)
-
+# [9.2.0](https://github.com/msobiecki/eslint-config/compare/v9.1.0...v9.2.0) (2025-10-18)
 
 ### Features
 
-* update react ([39b0817](https://github.com/msobiecki/eslint-config/commit/39b08174581bb111db248f12b3938878cf91dcc8))
+- update node ([69e772a](https://github.com/msobiecki/eslint-config/commit/69e772a8332f00862e7cef1fd3d7cb0f6055a3ad))
+
+# [9.1.0](https://github.com/msobiecki/eslint-config/compare/v9.0.0...v9.1.0) (2025-10-18)
+
+### Features
+
+- update react ([39b0817](https://github.com/msobiecki/eslint-config/commit/39b08174581bb111db248f12b3938878cf91dcc8))
 
 # [9.0.0](https://github.com/msobiecki/eslint-config/compare/v8.40.0...v9.0.0) (2025-10-18)
 
-
 ### chore
 
-* **eslint:** update to ESLint 9 and migrate to flat config ([e0be675](https://github.com/msobiecki/eslint-config/commit/e0be67505419e761ea645b6aff484e495089d6ad))
-
+- **eslint:** update to ESLint 9 and migrate to flat config ([e0be675](https://github.com/msobiecki/eslint-config/commit/e0be67505419e761ea645b6aff484e495089d6ad))
 
 ### BREAKING CHANGES
 
-* **eslint:** The ESLint configuration has been migrated to the new flat config.
+- **eslint:** The ESLint configuration has been migrated to the new flat config.
 
 # [8.40.0](https://github.com/msobiecki/eslint-config/compare/v8.39.0...v8.40.0) (2025-10-18)
 
-
 ### Features
 
-* new breaking base ([bb815f3](https://github.com/msobiecki/eslint-config/commit/bb815f3cb572cb541ce96705112d72753d6d8dea))
+- new breaking base ([bb815f3](https://github.com/msobiecki/eslint-config/commit/bb815f3cb572cb541ce96705112d72753d6d8dea))
 
 # [8.39.0](https://github.com/msobiecki/eslint-config/compare/v8.38.2...v8.39.0) (2025-10-18)
 
-
 ### Features
 
-* update Eslin9 ([#272](https://github.com/msobiecki/eslint-config/issues/272)) ([2d2763f](https://github.com/msobiecki/eslint-config/commit/2d2763f22deee8239a5aac9b67137a4adb07a685))
+- update Eslin9 ([#272](https://github.com/msobiecki/eslint-config/issues/272)) ([2d2763f](https://github.com/msobiecki/eslint-config/commit/2d2763f22deee8239a5aac9b67137a4adb07a685))
 
 ## [8.38.2](https://github.com/msobiecki/eslint-config/compare/v8.38.1...v8.38.2) (2025-09-09)
 
-
 ### Bug Fixes
 
-* change glob ([8fb7352](https://github.com/msobiecki/eslint-config/commit/8fb7352bfb9a1704916481893fec4e3a87171e95))
+- change glob ([8fb7352](https://github.com/msobiecki/eslint-config/commit/8fb7352bfb9a1704916481893fec4e3a87171e95))
 
 ## [8.38.1](https://github.com/msobiecki/eslint-config/compare/v8.38.0...v8.38.1) (2025-09-09)
 
