@@ -116,23 +116,23 @@ export const nodePreset = [
   {
     name: "Node.js",
     files: ["**/*.{js,mjs,cjs}"],
+    plugins: { n: nPlugin },
     languageOptions: {
       globals: {
         ...globals.node,
       },
     },
-    plugins: { n: nPlugin },
     rules: { ...nPlugin.configs?.["flat/recommended"]?.rules, ...nodeRules },
   },
   {
     name: "Node.js TypeScript",
     files: ["**/*.{ts,cts,mts}"],
+    plugins: { n: nPlugin },
     languageOptions: {
       globals: {
         ...globals.node,
       },
     },
-    plugins: { n: nPlugin },
     rules: { ...nPlugin.configs?.["flat/recommended"]?.rules, ...nodeRules },
   },
 ];
@@ -156,12 +156,10 @@ export const importPreset = [
   {
     name: "Import plugin",
     files: ["**/*.{js,jsx,mjs,cjs}"],
-    languageOptions: {
-      globals: {
-        ...importPlugin.flatConfigs?.recommended?.languageOptions,
-      },
-    },
     plugins: { import: importPlugin },
+    languageOptions: {
+      ...importPlugin.flatConfigs?.recommended?.languageOptions,
+    },
     rules: {
       ...importPlugin.flatConfigs?.recommended?.rules,
     },
@@ -169,12 +167,10 @@ export const importPreset = [
   {
     name: "Import plugin TypeScript",
     files: ["**/*.{ts,tsx,mts,cts}"],
-    languageOptions: {
-      globals: {
-        ...importPlugin.flatConfigs?.recommended?.languageOptions,
-      },
-    },
     plugins: { import: importPlugin },
+    languageOptions: {
+      ...importPlugin.flatConfigs?.recommended?.languageOptions,
+    },
     rules: {
       ...importPlugin.flatConfigs?.recommended?.rules,
       ...importPlugin.flatConfigs?.typescript?.rules,

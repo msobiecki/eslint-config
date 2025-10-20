@@ -9,7 +9,7 @@ import {
 
 export default defineConfig([
   ...basePreset,
+  ...bestPracticePreset,
   ...nodePreset,
   ...jestPreset,
-  ...bestPracticePreset,
 ]);
