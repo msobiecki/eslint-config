@@ -1,3 +1,10 @@
+# [9.11.0](https://github.com/msobiecki/eslint-config/compare/v9.10.0...v9.11.0) (2025-10-21)
+
+
+### Features
+
+* update eslint 9 ([725c4bb](https://github.com/msobiecki/eslint-config/commit/725c4bbe2857032ac705b25467e3ad6ce377d4b2))
+
 # [9.10.0](https://github.com/msobiecki/eslint-config/compare/v9.9.0...v9.10.0) (2025-10-20)
 
 
