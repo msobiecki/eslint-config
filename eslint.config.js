@@ -20,10 +20,11 @@ import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 import importxPlugin from "eslint-plugin-import-x";
 import storybookPlugin from "eslint-plugin-storybook";
 
-import getTsConfig from "./utils/get-ts-config.js";
+import { getTsConfig, getBaseDirectory } from "./utils/get-ts-config.js";
 
-import baseCustomRules from "./rules/base.js";
+import baseRules from "./rules/base.js";
 import nodeRules from "./rules/node.js";
+import unicornRules from "./rules/unicorn.js";
 
 /**
  * Base / best-practice preset
@@ -35,7 +36,7 @@ export const basePreset = [
     rules: {
       ...eslint.configs.recommended.rules,
       // Custom best-practice rules
-      ...baseCustomRules,
+      ...baseRules,
     },
   },
   {
@@ -44,7 +45,11 @@ export const basePreset = [
     languageOptions: {
       sourceType: "module",
       parser: tseslint.parser,
-      parserOptions: { project: getTsConfig(), ecmaFeatures: { jsx: true } },
+      parserOptions: {
+        project: getTsConfig(),
+        tsconfigRootDir: getBaseDirectory(),
+        ecmaFeatures: { jsx: true },
+      },
     },
     plugins: { "@typescript-eslint": tseslint.plugin },
     rules: {
@@ -79,7 +84,7 @@ export const bestPracticePreset = [
       ...unicornPlugin.configs?.recommended?.rules,
       ...prettierPlugin.configs?.recommended?.rules,
 
-      "unicorn/no-array-for-each": "off",
+      ...unicornRules,
     },
   },
   {
@@ -252,4 +257,9 @@ export const storybookPreset = [
   },
 ];
 
-export default [...basePreset, ...bestPracticePreset];
+export default [
+  ...basePreset,
+  ...bestPracticePreset,
+  ...nodePreset,
+  ...importPreset,
+];
