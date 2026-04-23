@@ -110,6 +110,18 @@ export default defineConfig([
 ]);
 ```
 
+### vitest configuration
+
+```javascript
+import { defineConfig } from "eslint/config";
+import { vitestPreset } from "@msobiecki/eslint-config";
+
+export default defineConfig([
+  ...,
+  vitestPreset
+]);
+```
+
 ### storybook configuration
 
 ```javascript
