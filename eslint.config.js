@@ -23,6 +23,7 @@ import storybookPlugin from "eslint-plugin-storybook";
 import { getTsConfig, getBaseDirectory } from "./utils/get-ts-config.js";
 
 import baseRules from "./rules/base.js";
+import typescriptRules from "./rules/typescript.js";
 import nodeRules from "./rules/node.js";
 import unicornRules from "./rules/unicorn.js";
 
@@ -35,7 +36,6 @@ export const basePreset = [
     files: ["**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts}"],
     rules: {
       ...eslint.configs.recommended.rules,
-      // Custom best-practice rules
       ...baseRules,
     },
   },
@@ -55,6 +55,7 @@ export const basePreset = [
     rules: {
       ...tseslint.configs?.strict?.[2]?.rules,
       ...tseslint.configs?.stylistic?.[2]?.rules,
+      ...typescriptRules,
     },
   },
 ];
