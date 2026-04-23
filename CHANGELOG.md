@@ -1,3 +1,10 @@
+# [9.15.0](https://github.com/msobiecki/eslint-config/compare/v9.14.0...v9.15.0) (2026-04-23)
+
+
+### Features
+
+* update github actions ([a2ae6fd](https://github.com/msobiecki/eslint-config/commit/a2ae6fd31a7f59e7e08365ace4e47105bad8af31))
+
 # [9.14.0](https://github.com/msobiecki/eslint-config/compare/v9.13.0...v9.14.0) (2026-04-23)
 
 
