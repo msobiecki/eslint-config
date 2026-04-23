@@ -19,6 +19,7 @@ import compatPlugin from "eslint-plugin-compat";
 import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 import importxPlugin from "eslint-plugin-import-x";
 import storybookPlugin from "eslint-plugin-storybook";
+import vitestPlugin from '@vitest/eslint-plugin'
 
 import { getTsConfig, getBaseDirectory } from "./utils/get-ts-config.js";
 
@@ -241,6 +242,27 @@ export const jestPreset = [
     files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
     plugins: { "testing-library": testingLibraryPlugin },
     rules: { ...testingLibraryPlugin.configs?.react?.rules },
+  },
+];
+
+/**
+ * Vitest preset
+ */
+export const vitestPreset = [
+  {
+    name: "Vitest",
+    files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+        ...globals.vitest,
+      },
+    },
+    plugins: { vitest: vitestPlugin },
+    rules: {
+      ...vitestPlugin.configs.recommended.rules,
+    },
   },
 ];
 

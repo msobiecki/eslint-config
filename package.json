@@ -53,6 +53,7 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/jest": "^30.0.0",
+    "@vitest/eslint-plugin": "^1.6.16",
     "eslint": "^9.37.0",
     "husky": "^9.1.7",
     "jest": "^30.3.0",
