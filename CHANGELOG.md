@@ -1,3 +1,10 @@
+# [9.17.0](https://github.com/msobiecki/eslint-config/compare/v9.16.0...v9.17.0) (2026-04-23)
+
+
+### Features
+
+* update vitest plugin ([f1639f6](https://github.com/msobiecki/eslint-config/commit/f1639f63230ba965232903bee77e93458e1eadb6))
+
 # [9.16.0](https://github.com/msobiecki/eslint-config/compare/v9.15.0...v9.16.0) (2026-04-23)
 
 
