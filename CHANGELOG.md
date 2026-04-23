@@ -1,3 +1,10 @@
+# [9.14.0](https://github.com/msobiecki/eslint-config/compare/v9.13.0...v9.14.0) (2026-04-23)
+
+
+### Features
+
+* improve typescript type imports exports ([79490b8](https://github.com/msobiecki/eslint-config/commit/79490b8fcae93ff179e3050ebebdcd912a31710e))
+
 # [9.13.0](https://github.com/msobiecki/eslint-config/compare/v9.12.0...v9.13.0) (2026-03-29)
 
 
