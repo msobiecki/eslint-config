@@ -4,6 +4,9 @@ const unicornRules = {
 
   // allow using undefined where void 0 could be used
   "unicorn/no-useless-undefined": "off",
+
+  // allow using null instead of undefined where void 0 could be used
+  "unicorn/no-null": "off",
 };
 
 export default unicornRules;
